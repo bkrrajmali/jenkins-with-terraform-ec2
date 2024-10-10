@@ -24,5 +24,15 @@ pipeline {
                 sh 'terraform init'
             }
         }
+    stage('Terraform Initialize') { 
+            steps {
+                sh 'terraform init'
+            }
+        }
+    stage('Terraform Initialize') { 
+            steps {
+                sh 'terraform apply --auto-approve'
+            }
+        }
 }
 }
