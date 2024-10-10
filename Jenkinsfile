@@ -9,6 +9,7 @@ pipeline {
         stage('Terraform Download and Install') { 
             steps {
                 sh 'sudo apt update'
+                sh 'wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg'
             }
         }
     }
