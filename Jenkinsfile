@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'echo "This is Jenkins Pipeline'
+                sh 'echo "This is Jenkins Pipeline"'
             }
         }
     }
