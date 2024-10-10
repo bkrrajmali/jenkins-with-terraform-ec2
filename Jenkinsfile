@@ -35,7 +35,12 @@ pipeline {
         }
         stage('Terraform Destroy Approval') {
             steps {
-                input message 'Approve or Destroy', ok: 'Destroy'
+                input message: 'Approve or Destroy', ok: 'Destroy'
+            }
+        }
+        stage('Terraform Destroy') {
+            steps {
+                sh 'terraform destroy --auto-approve'
             }
         }
     }
